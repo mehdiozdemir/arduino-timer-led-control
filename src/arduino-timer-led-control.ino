@@ -18,7 +18,7 @@ void setup() {
 
   attachInterrupt(digitalPinToInterrupt(btn), redControl, RISING);
 
-  // Timer1 ayarları
+  // Timer1
   cli();
   TCCR1A = 0; 
   TCCR1B = 0;
@@ -26,7 +26,7 @@ void setup() {
   TCCR1B |= (1 << WGM12);
   TCCR1B |= (1 << CS12) | (1 << CS10);
 
-  // Timer2 ayarları
+  // Timer2
   TCCR2A = 0;
   TCCR2B = 0;
   TIMSK2 |= (1 << TOIE2);
